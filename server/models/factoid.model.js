@@ -1,0 +1,17 @@
+/////////////////////////////////////////////////
+//  FACTOID MODEL
+/////////////////////////////////////////////////
+
+// //// FIELDS //////////////////////////////////
+const mongoose = require("mongoose");
+
+// //// SCHEMA //////////////////////////////////
+const FactoidSchema = new mongoose.Schema({
+    info: String
+}, {timestams: true});  // Timestamps implement CreatedAt / UpdateAt
+
+// //// MODEL ///////////////////////////////////
+const Factoid = mongoose.model("Factoid", FactoidSchema);
+
+// **** Export Model ********
+module.exports = Factoid;
